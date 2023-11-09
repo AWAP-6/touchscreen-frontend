@@ -1,0 +1,39 @@
+.locker-container {
+    background-color: blue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .locker-container h1 {
+    color: white;
+  }
+  
+  .locker-container label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .locker-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .numeric-keypad {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .numeric-keypad button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+  }
+
+  
