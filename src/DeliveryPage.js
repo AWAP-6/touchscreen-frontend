@@ -14,8 +14,7 @@ const DeliveryPage = ({ inputValue, setInputValue, onClearClick, onEnterClick })
       <label>Enter Delivery Code:</label>
       <input type="text" value={inputValue} onChange={handleInput} />
       <div className="button-container">
-        <button onClick={onClearClick}>Clear</button>
-        <button onClick={onEnterClick}>Enter</button>
+
       </div>
     </div>
   );

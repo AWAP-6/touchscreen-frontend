@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NumericKeypad = ({ onKeyClick, onClearClick, onEnterClick }) => {
+const NumericKeypad = ({ onKeyClick, onClearClick, onEnterClick, inputValue }) => {
   const keypadNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   return (
@@ -12,8 +12,8 @@ const NumericKeypad = ({ onKeyClick, onClearClick, onEnterClick }) => {
           </button>
         ))}
         <div className="button-container">
-          <button onClick={onClearClick}>Clear</button>
-          <button onClick={onEnterClick}>Enter</button>
+          <button onClick={() => onClearClick()}>Clear</button>
+          <button onClick={() => onEnterClick(inputValue)}>Enter</button>
         </div>
       </div>
     </div>

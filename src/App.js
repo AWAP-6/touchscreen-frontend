@@ -18,6 +18,15 @@ function App() {
     }
   };
 
+  const handleClearClick = () => {
+    setInputValue('');
+  };
+
+  const handleEnterClick = (value) => {
+    // Implement logic for enter click if needed
+    console.log('Entered value:', value);
+  };
+
   return (
     <div className="App">
       <h1>Parcel Locker Simulator</h1>
@@ -29,7 +38,11 @@ function App() {
           <DeliveryPage inputValue={inputValue} setInputValue={setInputValue} />
         )}
       </div>
-      <NumericKeypad onKeyClick={handleKeyClick} />
+      <NumericKeypad
+        onKeyClick={handleKeyClick}
+        onClearClick={handleClearClick}
+        onEnterClick={handleEnterClick}
+      />
       <div className="page-switcher">
         <button onClick={() => handleSwitchPage('pickup')} disabled={activePage === 'pickup'}>
           Pickup

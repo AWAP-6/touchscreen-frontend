@@ -14,8 +14,7 @@ const PickupPage = ({ inputValue, setInputValue, onClearClick, onEnterClick }) =
       <label>Enter Pickup Code:</label>
       <input type="text" value={inputValue} onChange={handleInput} />
       <div className="button-container">
-        <button onClick={onClearClick}>Clear</button>
-        <button onClick={onEnterClick}>Enter</button>
+
       </div>
     </div>
   );
