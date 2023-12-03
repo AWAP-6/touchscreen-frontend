@@ -1,21 +1,20 @@
 import React from 'react';
+import './NumericKeypad.css';
 
-const NumericKeypad = ({ onKeyClick, onClearClick, onEnterClick }) => {
-  const keypadNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const NumericKeypad = ({ onKeyClick, onClearClick, onEnterClick, setCurrentPage }) => {
+  const keypadNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
     <div className="numeric-keypad">
-      <div className="keypad-grid">
-        {keypadNumbers.map((number) => (
-          <button key={number} onClick={() => onKeyClick(number)}>
-            {number}
-          </button>
-        ))}
-        <div className="button-container">
-          <button onClick={onClearClick}>Clear</button>
-          <button onClick={onEnterClick}>Enter</button>
-        </div>
-      </div>
+      {keypadNumbers.map((number) => (
+        <button key={number} onClick={() => onKeyClick(number)}>
+          {number}
+        </button>
+      ))}
+      <button className="clear" onClick={onClearClick}>Clear</button>
+      <button className="zero" onClick={() => onKeyClick(0)}>0</button>
+      <button className="enter" onClick={onEnterClick}>Enter</button>
+      <button className="back" onClick={() => setCurrentPage('menu')}>Back to Menu</button>
     </div>
   );
 };

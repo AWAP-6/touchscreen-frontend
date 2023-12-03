@@ -1,27 +1,37 @@
-/* Apply styles to the numeric keypad */
 .numeric-keypad {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px; 
   max-width: 300px;
   margin: 0 auto;
 }
 
-/* Style individual keypad buttons */
 .numeric-keypad button {
-  width: 25%; /* Four buttons in a row */
-  padding: 10px;
+  padding: 20px; 
   font-size: 18px;
   background-color: white;
   border: 1px solid lightblue;
   border-radius: 5px;
   cursor: pointer;
-  margin: 5px; /* Spacing between buttons */
 }
 
-/* Style the last two buttons centered at the bottom */
-.numeric-keypad button:nth-last-child(-n + 2) {
-  width: 50%; /* Two buttons centered at the bottom */
-  margin: 5px auto; /* Center the last two buttons horizontally */
+.numeric-keypad button.clear {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.numeric-keypad button.enter {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+.numeric-keypad button.zero {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.numeric-keypad button.back {
+  grid-column: 1 / -1;
+  margin-top: 10px; 
 }
