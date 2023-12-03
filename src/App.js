@@ -56,7 +56,6 @@ function App() {
   return (
     <div className="App">
       <h1>Parcel Locker Simulator</h1>
-      
       {activePage === 'menu' && (
         <div className="page-switcher">
           <button onClick={() => setActivePage('pickup')}>Pickup</button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './NumericKeypad.css';
 
+
 const NumericKeypad = ({ onKeyClick, onClearClick, onEnterClick, setCurrentPage }) => {
   const keypadNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
