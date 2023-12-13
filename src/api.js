@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:8080/lockers';
+const baseURL = 'https://awap-6server.onrender.com';
 
 export const checkOpenCode = (openCode) => {
     return axios.get(`${baseURL}/checkOpenCode`, {
