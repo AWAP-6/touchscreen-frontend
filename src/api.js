@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://awap-6server.onrender.com';
+const baseURL = 'https://awap-6server.onrender.com/lockers';
 
 export const checkOpenCode = (openCode) => {
     return axios.get(`${baseURL}/checkOpenCode`, {
